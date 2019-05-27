@@ -14,7 +14,7 @@ These are the list of environment variables currently needed
 
 * `MAPBOX_ACCESS_TOKEN`: required to load any data at all
 * `NODE_ENV`: defaults to 'development'
-* `BASE_URL`: defaults to 'http://localhost:8080' (without trailing slash)
+* `BASE_URL`: defaults to `null`
 
 ## Development
 
