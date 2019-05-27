@@ -9,7 +9,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "webpack-dev-server --progress --hot --open",
-    "build": "webpack -p --progress"
+    "build": "webpack -p"
   },
   "dependencies": {
     "global": "^4.3.2",

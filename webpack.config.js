@@ -36,7 +36,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
-      BASE_URL: 'http://localhost:8080',
+      BASE_URL: null,
       MAPBOX_ACCESS_TOKEN: null,
     })
   ],

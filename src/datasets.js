@@ -1,7 +1,8 @@
 import fetch from 'isomorphic-fetch';
+import window from 'global/window';
 import { processCsvData } from 'kepler.gl/processors';
 
-const baseUrl = process.env.BASE_URL;
+const baseUrl = process.env.BASE_URL || window.location.origin;
 
 const datasets = {
   'taxi-nyc': {
