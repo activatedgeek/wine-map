@@ -1,0 +1,37 @@
+language: node_js
+node_js:
+  - "lts/*"
+
+dist: xenial
+
+env:
+  global:
+    - NETLIFYCTL_VERSION=0.4.0
+
+stages:
+  - name: test
+    if: type = pull_request
+  - name: deploy
+    if: (type != pull_request AND branch = master)
+
+jobs:
+  include:
+    - stage: test
+      before_script:
+        - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_VERSION}/netlifyctl-linux-amd64-${NETLIFYCTL_VERSION}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
+        - ./netlifyctl version
+        - yarn
+      script:
+        - MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN} npm run build
+      after_success:
+        - ./netlifyctl deploy -A ${NETLIFY_ACCESS_TOKEN} -b dist/ -m "${TRAVIS_COMMIT_MESSAGE}" -d
+    
+    - stage: deploy
+      before_script:
+        - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_VERSION}/netlifyctl-linux-amd64-${NETLIFYCTL_VERSION}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
+        - ./netlifyctl version
+        - yarn
+      script:
+        - MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN} npm run build
+      after_success:
+        - ./netlifyctl deploy -A ${NETLIFY_ACCESS_TOKEN} -b dist/ -m "${TRAVIS_COMMIT_MESSAGE}"
