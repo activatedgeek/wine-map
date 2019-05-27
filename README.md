@@ -1,6 +1,11 @@
 # Wine Map
 
+[![Build Status](https://travis-ci.com/activatedgeek/wine-map.svg?branch=master)](https://travis-ci.com/activatedgeek/wine-map)
+
 A map of my wines built on top of [kepler.gl](https://kepler.gl) and [Mapbox](https://www.mapbox.com).
+This is deployed at [wine.sanyamkapoor.com](https://wine.sanyamkapoor.com)
+
+**NOTE**: I'm still adding my data and visualizations to this map.
 
 ## Install
 
