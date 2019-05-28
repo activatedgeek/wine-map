@@ -1,4 +1,6 @@
+const path = require('path');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -6,7 +8,7 @@ module.exports = {
   },
 
   output: {
-    path: __dirname + '/dist/assets',
+    path: path.join(__dirname, 'dist', 'assets'),
     publicPath: '/',
     filename: 'winemap.js'
   },
@@ -38,10 +40,17 @@ module.exports = {
       NODE_ENV: 'development',
       BASE_URL: null,
       MAPBOX_ACCESS_TOKEN: null,
-    })
+    }),
+    new CopyPlugin([
+      { from: 'data', to: 'data'},
+    ])
   ],
   devServer: {
-    contentBase: './dist',
-    hot: true
+    port: process.env.PORT || 8080,
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, 'dist'),
+    hot: true,
+    open: true,
+    publicPath: '/assets/',
   }
 };

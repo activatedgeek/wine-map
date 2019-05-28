@@ -5,10 +5,10 @@ import { processCsvData } from 'kepler.gl/processors';
 const baseUrl = process.env.BASE_URL || window.location.origin;
 
 const datasets = {
-  'taxi-nyc': {
+  vivino: {
     type: 'text/csv',
-    url: `${baseUrl}/assets/data/nyc-trips.csv`,
-    label: 'Taxi Trips in New York City',
+    url: `${baseUrl}/assets/data/vivino.csv`,
+    label: 'Sanyam Kapoor\'s Wines',
   },
 };
 

@@ -8,8 +8,8 @@
   },
   "version": "0.0.1",
   "scripts": {
-    "dev": "webpack-dev-server --progress --hot --open",
-    "build": "webpack -p"
+    "dev": "webpack-dev-server --progress",
+    "build": "webpack"
   },
   "dependencies": {
     "global": "^4.3.2",
@@ -39,6 +39,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.3",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-loader": "^2.1.2",

@@ -32,6 +32,6 @@ jobs:
         - ./netlifyctl version
         - yarn
       script:
-        - MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN} npm run build
+        - MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN} npm run build -- -p
       after_success:
         - ./netlifyctl deploy -A ${NETLIFY_ACCESS_TOKEN} -b dist/ -m "${TRAVIS_COMMIT_MESSAGE}"
