@@ -10,9 +10,9 @@ import getDataset from './datasets';
 
 class App extends PureComponent {
   componentDidMount() {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'staging') {
       const { dispatch } = this.props;
-      getDataset('taxi-nyc').then((config) => {
+      getDataset('vivino').then((config) => {
         dispatch(addDataToMap(config));
       });
     }
