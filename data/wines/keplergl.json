@@ -17,21 +17,30 @@
                 230
               ],
               "columns": {
-                "altitude": null,
                 "lat": "Winery_Lat",
-                "lng": "Winery_Long"
+                "lng": "Winery_Long",
+                "altitude": null
               },
               "isVisible": true,
               "visConfig": {
+                "radius": 10,
                 "fixedRadius": false,
-                "strokeColor": null,
-                "radiusRange": [
-                  0,
-                  50
-                ],
-                "filled": true,
                 "opacity": 1,
+                "outline": false,
                 "thickness": 2.5,
+                "strokeColor": null,
+                "colorRange": {
+                  "name": "Purple Blue Yellow 4",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#2B1E3E",
+                    "#466373",
+                    "#7BA889",
+                    "#D6DEBF"
+                  ],
+                  "reversed": false
+                },
                 "strokeColorRange": {
                   "name": "Purple Blue Yellow 6",
                   "type": "sequential",
@@ -46,19 +55,11 @@
                   ],
                   "reversed": false
                 },
-                "radius": 10,
-                "outline": false,
-                "colorRange": {
-                  "name": "Global Warming 3",
-                  "type": "sequential",
-                  "category": "Uber",
-                  "colors": [
-                    "#5A1846",
-                    "#C70039",
-                    "#FFC300"
-                  ],
-                  "reversed": false
-                }
+                "radiusRange": [
+                  0,
+                  50
+                ],
+                "filled": true
               },
               "textLabel": [
                 {
@@ -111,21 +112,21 @@
               "isVisible": true,
               "visConfig": {
                 "opacity": 0.77,
-                "radius": 99.6,
                 "colorRange": {
-                  "name": "ColorBrewer RdYlGn-6",
-                  "type": "diverging",
-                  "category": "ColorBrewer",
+                  "name": "Pink Wine 6",
+                  "type": "sequential",
+                  "category": "Uber",
                   "colors": [
-                    "#d73027",
-                    "#fc8d59",
-                    "#fee08b",
-                    "#d9ef8b",
-                    "#91cf60",
-                    "#1a9850"
+                    "#2C1E3D",
+                    "#573660",
+                    "#83537C",
+                    "#A6758E",
+                    "#C99DA4",
+                    "#EDD1CA"
                   ],
                   "reversed": false
-                }
+                },
+                "radius": 99.6
               },
               "textLabel": [
                 {
@@ -160,8 +161,9 @@
                 "Vintage",
                 "Region",
                 "Country",
-                "Type",
-                "Style"
+                "Style",
+                "Rating",
+                "Type"
               ]
             },
             "enabled": true
@@ -173,6 +175,15 @@
         },
         "layerBlending": "normal",
         "splitMaps": []
+      },
+      "mapState": {
+        "bearing": 0,
+        "dragRotate": false,
+        "latitude": 29.230973586209274,
+        "longitude": 16.54165470255541,
+        "pitch": 0,
+        "zoom": 1.5498279762149376,
+        "isSplit": false
       },
       "mapStyle": {
         "styleType": "muted_night",
@@ -189,5 +200,9 @@
         "mapStyles": {}
       }
     }
+  },
+  "info": {
+    "app": "kepler.gl",
+    "created_at": "Wed May 29 2019 16:42:36 GMT-0400 (EDT)"
   }
 }
