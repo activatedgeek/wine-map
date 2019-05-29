@@ -10,10 +10,12 @@ import getDataset from './datasets';
 
 class App extends PureComponent {
   componentDidMount() {
-    const { dispatch } = this.props;
-    getDataset('vivino').then((config) => {
-      dispatch(addDataToMap(config));
-    });
+    if (process.env.NODE_ENV === 'staging') {
+      const { dispatch } = this.props;
+      getDataset('vivino').then((config) => {
+        dispatch(addDataToMap(config));
+      });
+    }
   }
 
   render() {

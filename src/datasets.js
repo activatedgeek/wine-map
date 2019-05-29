@@ -7,7 +7,7 @@ const baseUrl = process.env.BASE_URL || window.location.origin;
 const datasets = {
   vivino: {
     type: 'text/csv',
-    url: `${baseUrl}/assets/data/vivino.csv`,
+    url: `${baseUrl}/assets/data/my-wines.csv`,
     label: 'Sanyam Kapoor\'s Wines',
   },
 };
