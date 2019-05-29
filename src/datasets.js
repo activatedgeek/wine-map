@@ -7,8 +7,9 @@ const baseUrl = process.env.BASE_URL || window.location.origin;
 const datasets = {
   vivino: {
     type: 'text/csv',
-    url: `${baseUrl}/assets/data/my-wines.csv`,
+    data_url: `${baseUrl}/assets/data/wines/data.csv`,
     label: 'Sanyam Kapoor\'s Wines',
+    config_url: `${baseUrl}/assets/data/wines/keplergl.json`,
   },
 };
 
@@ -23,23 +24,31 @@ function processData(dataString, type) {
 
 export default function getDataset(id) {
   const meta = datasets[id];
-  return fetch(meta.url,
-    {
-      headers: { 'content-type': meta.type },
-    }).then(response => response.text()).then(dataString => ({
-    datasets: {
-      info: {
-        id,
-        label: meta.label,
+
+  const urlPromises = [
+    fetch(meta.data_url, { headers: { 'content-type': meta.type } }),
+    fetch(meta.config_url, { headers: { 'content-type': 'application/json' } }),
+  ];
+
+  return Promise.all(urlPromises).then(responses => (
+    Promise.all(responses.map(res => res.text()))
+  )).then((texts) => {
+    const [dataString, configString] = texts; // eslint-disable-line no-unused-vars
+    const config = window.JSON.parse(configString);
+
+    return {
+      datasets: {
+        info: {
+          id,
+          label: meta.label,
+        },
+        data: processData(dataString, meta.type),
       },
-      data: processData(dataString, meta.type),
-    },
-    option: {
-      centerMap: true,
-      readOnly: false,
-    },
-    config: {
-      mapStyle: { styleType: 'dark' },
-    },
-  }));
+      option: {
+        centerMap: true,
+        readOnly: false,
+      },
+      ...config,
+    };
+  });
 }

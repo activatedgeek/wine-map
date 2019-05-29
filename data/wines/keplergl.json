@@ -1,0 +1,193 @@
+{
+  "config": {
+    "version": "v1",
+    "config": {
+      "visState": {
+        "filters": [],
+        "layers": [
+          {
+            "id": "1vxriu9",
+            "type": "point",
+            "config": {
+              "dataId": "vivino",
+              "label": "Wineries",
+              "color": [
+                255,
+                254,
+                230
+              ],
+              "columns": {
+                "altitude": null,
+                "lat": "Winery_Lat",
+                "lng": "Winery_Long"
+              },
+              "isVisible": true,
+              "visConfig": {
+                "fixedRadius": false,
+                "strokeColor": null,
+                "radiusRange": [
+                  0,
+                  50
+                ],
+                "filled": true,
+                "opacity": 1,
+                "thickness": 2.5,
+                "strokeColorRange": {
+                  "name": "Purple Blue Yellow 6",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#2B1E3E",
+                    "#343D5E",
+                    "#4F777E",
+                    "#709E87",
+                    "#99BE95",
+                    "#D6DEBF"
+                  ],
+                  "reversed": false
+                },
+                "radius": 10,
+                "outline": false,
+                "colorRange": {
+                  "name": "Global Warming 3",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#5A1846",
+                    "#C70039",
+                    "#FFC300"
+                  ],
+                  "reversed": false
+                }
+              },
+              "textLabel": [
+                {
+                  "field": null,
+                  "color": [
+                    255,
+                    255,
+                    255
+                  ],
+                  "size": 18,
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "anchor": "start",
+                  "alignment": "center"
+                }
+              ]
+            },
+            "visualChannels": {
+              "colorField": {
+                "name": "Type",
+                "type": "string"
+              },
+              "colorScale": "ordinal",
+              "strokeColorField": {
+                "name": "Type",
+                "type": "string"
+              },
+              "strokeColorScale": "ordinal",
+              "sizeField": null,
+              "sizeScale": "linear"
+            }
+          },
+          {
+            "id": "womcsf",
+            "type": "heatmap",
+            "config": {
+              "dataId": "vivino",
+              "label": "Heatmap",
+              "color": [
+                77,
+                193,
+                156
+              ],
+              "columns": {
+                "lat": "Winery_Lat",
+                "lng": "Winery_Long"
+              },
+              "isVisible": true,
+              "visConfig": {
+                "opacity": 0.77,
+                "radius": 99.6,
+                "colorRange": {
+                  "name": "ColorBrewer RdYlGn-6",
+                  "type": "diverging",
+                  "category": "ColorBrewer",
+                  "colors": [
+                    "#d73027",
+                    "#fc8d59",
+                    "#fee08b",
+                    "#d9ef8b",
+                    "#91cf60",
+                    "#1a9850"
+                  ],
+                  "reversed": false
+                }
+              },
+              "textLabel": [
+                {
+                  "field": null,
+                  "color": [
+                    255,
+                    255,
+                    255
+                  ],
+                  "size": 18,
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "anchor": "start",
+                  "alignment": "center"
+                }
+              ]
+            },
+            "visualChannels": {
+              "weightField": null,
+              "weightScale": "linear"
+            }
+          }
+        ],
+        "interactionConfig": {
+          "tooltip": {
+            "fieldsToShow": {
+              "vivino": [
+                "Winery",
+                "Name",
+                "Vintage",
+                "Region",
+                "Country",
+                "Type",
+                "Style"
+              ]
+            },
+            "enabled": true
+          },
+          "brush": {
+            "size": 0.5,
+            "enabled": false
+          }
+        },
+        "layerBlending": "normal",
+        "splitMaps": []
+      },
+      "mapStyle": {
+        "styleType": "muted_night",
+        "topLayerGroups": {},
+        "visibleLayerGroups": {
+          "label": true,
+          "border": false,
+          "water": true,
+          "land": true,
+          "3d building": false,
+          "road": false,
+          "building": false
+        },
+        "mapStyles": {}
+      }
+    }
+  }
+}
