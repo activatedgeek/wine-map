@@ -3,4 +3,5 @@
 #
 
 # Redirect Netlify link to custom domain
-https://wine-map.netlify.com/* https://wine-map.sanyamkapoor.com/:splat 301!
+http://wine-map.netlify.com/* https://wine.sanyamkapoor.com/:splat 301!
+https://wine-map.netlify.com/* https://wine.sanyamkapoor.com/:splat 301!
