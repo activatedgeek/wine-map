@@ -1,208 +1,193 @@
 {
+  "version": "v1",
   "config": {
-    "version": "v1",
-    "config": {
-      "visState": {
-        "filters": [],
-        "layers": [
-          {
-            "id": "1vxriu9",
-            "type": "point",
-            "config": {
-              "dataId": "vivino",
-              "label": "Wineries",
-              "color": [
-                255,
-                254,
-                230
-              ],
-              "columns": {
-                "lat": "Winery_Lat",
-                "lng": "Winery_Long",
-                "altitude": null
-              },
-              "isVisible": true,
-              "visConfig": {
-                "radius": 10,
-                "fixedRadius": false,
-                "opacity": 1,
-                "outline": false,
-                "thickness": 2.5,
-                "strokeColor": null,
-                "colorRange": {
-                  "name": "Purple Blue Yellow 4",
-                  "type": "sequential",
-                  "category": "Uber",
-                  "colors": [
-                    "#2B1E3E",
-                    "#466373",
-                    "#7BA889",
-                    "#D6DEBF"
-                  ],
-                  "reversed": false
-                },
-                "strokeColorRange": {
-                  "name": "Purple Blue Yellow 6",
-                  "type": "sequential",
-                  "category": "Uber",
-                  "colors": [
-                    "#2B1E3E",
-                    "#343D5E",
-                    "#4F777E",
-                    "#709E87",
-                    "#99BE95",
-                    "#D6DEBF"
-                  ],
-                  "reversed": false
-                },
-                "radiusRange": [
-                  0,
-                  50
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "1vxriu9",
+          "type": "point",
+          "config": {
+            "dataId": "vivino",
+            "label": "Wineries",
+            "color": [
+              255,
+              254,
+              230
+            ],
+            "columns": {
+              "lat": "Winery_Lat",
+              "lng": "Winery_Long",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 10,
+              "fixedRadius": false,
+              "opacity": 1,
+              "outline": false,
+              "thickness": 2.5,
+              "strokeColor": null,
+              "colorRange": {
+                "name": "Purple Blue Yellow 4",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#2B1E3E",
+                  "#466373",
+                  "#7BA889",
+                  "#D6DEBF"
                 ],
-                "filled": true
+                "reversed": false
               },
-              "textLabel": [
-                {
-                  "field": null,
-                  "color": [
-                    255,
-                    255,
-                    255
-                  ],
-                  "size": 18,
-                  "offset": [
-                    0,
-                    0
-                  ],
-                  "anchor": "start",
-                  "alignment": "center"
-                }
-              ]
-            },
-            "visualChannels": {
-              "colorField": {
-                "name": "Type",
-                "type": "string"
+              "strokeColorRange": {
+                "name": "Purple Blue Yellow 6",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#2B1E3E",
+                  "#343D5E",
+                  "#4F777E",
+                  "#709E87",
+                  "#99BE95",
+                  "#D6DEBF"
+                ],
+                "reversed": false
               },
-              "colorScale": "ordinal",
-              "strokeColorField": {
-                "name": "Type",
-                "type": "string"
-              },
-              "strokeColorScale": "ordinal",
-              "sizeField": null,
-              "sizeScale": "linear"
-            }
-          },
-          {
-            "id": "womcsf",
-            "type": "heatmap",
-            "config": {
-              "dataId": "vivino",
-              "label": "Heatmap",
-              "color": [
-                77,
-                193,
-                156
+              "radiusRange": [
+                0,
+                50
               ],
-              "columns": {
-                "lat": "Winery_Lat",
-                "lng": "Winery_Long"
-              },
-              "isVisible": true,
-              "visConfig": {
-                "opacity": 0.77,
-                "colorRange": {
-                  "name": "Pink Wine 6",
-                  "type": "sequential",
-                  "category": "Uber",
-                  "colors": [
-                    "#2C1E3D",
-                    "#573660",
-                    "#83537C",
-                    "#A6758E",
-                    "#C99DA4",
-                    "#EDD1CA"
-                  ],
-                  "reversed": false
-                },
-                "radius": 99.6
-              },
-              "textLabel": [
-                {
-                  "field": null,
-                  "color": [
-                    255,
-                    255,
-                    255
-                  ],
-                  "size": 18,
-                  "offset": [
-                    0,
-                    0
-                  ],
-                  "anchor": "start",
-                  "alignment": "center"
-                }
-              ]
+              "filled": true
             },
-            "visualChannels": {
-              "weightField": null,
-              "weightScale": "linear"
-            }
-          }
-        ],
-        "interactionConfig": {
-          "tooltip": {
-            "fieldsToShow": {
-              "vivino": [
-                "Winery",
-                "Name",
-                "Vintage",
-                "Region",
-                "Country",
-                "Style",
-                "Rating",
-                "Type"
-              ]
-            },
-            "enabled": true
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
           },
-          "brush": {
-            "size": 0.5,
-            "enabled": false
+          "visualChannels": {
+            "colorField": {
+              "name": "Type",
+              "type": "string"
+            },
+            "colorScale": "ordinal",
+            "strokeColorField": {
+              "name": "Type",
+              "type": "string"
+            },
+            "strokeColorScale": "ordinal",
+            "sizeField": null,
+            "sizeScale": "linear"
           }
         },
-        "layerBlending": "normal",
-        "splitMaps": []
-      },
-      "mapState": {
-        "bearing": 0,
-        "dragRotate": false,
-        "latitude": 29.230973586209274,
-        "longitude": 16.54165470255541,
-        "pitch": 0,
-        "zoom": 1.5498279762149376,
-        "isSplit": false
-      },
-      "mapStyle": {
-        "styleType": "muted_night",
-        "topLayerGroups": {},
-        "visibleLayerGroups": {
-          "label": true,
-          "border": false,
-          "water": true,
-          "land": true,
-          "3d building": false,
-          "road": false,
-          "building": false
+        {
+          "id": "womcsf",
+          "type": "heatmap",
+          "config": {
+            "dataId": "vivino",
+            "label": "Heatmap",
+            "color": [
+              77,
+              193,
+              156
+            ],
+            "columns": {
+              "lat": "Winery_Lat",
+              "lng": "Winery_Long"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.77,
+              "colorRange": {
+                "name": "Pink Wine 6",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#2C1E3D",
+                  "#573660",
+                  "#83537C",
+                  "#A6758E",
+                  "#C99DA4",
+                  "#EDD1CA"
+                ],
+                "reversed": false
+              },
+              "radius": 99.6
+            },
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "weightField": null,
+            "weightScale": "linear"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "vivino": [
+              "Winery",
+              "Name",
+              "Vintage",
+              "Region",
+              "Country",
+              "Style",
+              "Rating",
+              "Type"
+            ]
+          },
+          "enabled": true
         },
-        "mapStyles": {}
-      }
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": []
+    },
+    "mapStyle": {
+      "styleType": "dark",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": true,
+        "border": true,
+        "water": true,
+        "land": true,
+        "3d building": false,
+        "road": false,
+        "building": false
+      },
+      "mapStyles": {}
     }
-  },
-  "info": {
-    "app": "kepler.gl",
-    "created_at": "Wed May 29 2019 16:42:36 GMT-0400 (EDT)"
   }
 }
