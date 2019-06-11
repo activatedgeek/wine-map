@@ -48,7 +48,7 @@ export default function getDataset(id) {
         centerMap: true,
         readOnly: false,
       },
-      ...config,
+      config,
     };
   });
 }
