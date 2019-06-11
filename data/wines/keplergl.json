@@ -180,10 +180,10 @@
       "topLayerGroups": {},
       "visibleLayerGroups": {
         "label": true,
-        "border": true,
         "water": true,
         "land": true,
         "3d building": false,
+        "border": true,
         "road": false,
         "building": false
       },
