@@ -14,7 +14,7 @@
   "dependencies": {
     "global": "^4.3.2",
     "isomorphic-fetch": "^2.2.1",
-    "kepler.gl": "^1.0.0",
+    "kepler.gl": "^1.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
