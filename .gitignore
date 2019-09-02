@@ -89,3 +89,9 @@ typings/
 
 # webpack build assets
 dist/assets/
+
+# Raw data
+data/tmp
+
+# Jupyter Notebook
+.ipynb_checkpoints/
